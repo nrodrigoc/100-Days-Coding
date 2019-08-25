@@ -15,17 +15,19 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando DOM</h1>
+    <h1 id="msg">Iniciando DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o DOM em JavaScript</p>
-    <div><strong>Clique em mim</strong> </div>
+    <div><strong>Clique em mim</strong> </div>  
     <script>
         var corpo = window.document.body
+        var titulo = window.document.getElementsByTagName('h1')[0]
         var p1 = window.document.getElementsByTagName('p')[0] //pega o parágrafo por ordem no [indice]
-        corpo.style.background = 'black'
+        //var d = document.getElementById('msg')
         
-        document.write(p1.innerText)
-
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'red'
+        titulo.style.color = 'brown'
 
     </script>
 </body>
