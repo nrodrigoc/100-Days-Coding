@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consulado</title>
+</head>
+<body>
+    <h1>Validação de Cidadania</h1>
+    País de origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Confirmar" id="bConfirm">
+    <div id="res">
+        
+    </div>
+    <script>
+        var botao = document.getElementById('bConfirm')
+        botao.addEventListener('click', verificar)
+        
+        
+        function verificar(){
+            var pais = document.getElementById('txtpais')
+            var txt = String(pais.value)
+
+            var res = document.getElementById(`res`)  
+            res.innerHTML = `Bem vindo(a) ao consulado`          
+            if(txt.toLowerCase() == 'brasil'){
+                res.innerHTML += `<p>Você é huehueheu brbrbr</p>`
+            }else if(txt.toLowerCase() != 'brasil' && txt != 0){
+                res.innerHTML += `<p>Good Mr. Gringo</p>`
+            }
+        }
+        
+    </script>
+
+
+</body>
+</html>
